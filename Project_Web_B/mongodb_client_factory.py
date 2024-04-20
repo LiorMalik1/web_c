@@ -3,6 +3,7 @@ from pymongo.server_api import ServerApi
 
 uri = "mongodb+srv://malno:noamal2210@noa.ghwa7bo.mongodb.net/?retryWrites=true&w=majority&appName=noa"
 
+#cedvdvfvfvfvvsvsfv
 
 class MongodbClientFactory:
     _instance = None
