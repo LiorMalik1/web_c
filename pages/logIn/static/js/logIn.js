@@ -24,6 +24,14 @@ const onSubmit = (e) => {
       msg3.innerHTML ="please enter a password with more than 7 characters";
     }
     else {
+         //to overcome the duplicate onsubmit issue
+        var formData = new FormData(e.target)
+        // prepare AJAX request
+        var request = new XMLHttpRequest()
+        // get the method and action from the form
+        var method = e.target.method || 'POST'
+        var action = e.target.action || '#'
+
         console.log('O.K')
         alert("You are in!")
         const list = document.createElement('list')

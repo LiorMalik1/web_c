@@ -44,6 +44,7 @@ const onSubmit = (e) => {
       msg.innerHTML ="please enter a valid phone number";
      }
     else {
+        //to overcome the duplicate onsubmit issue
         var formData = new FormData(e.target)
         // prepare AJAX request
         var request = new XMLHttpRequest()
