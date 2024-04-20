@@ -6,7 +6,6 @@ from pymongo.server_api import ServerApi
 uri = "mongodb+srv://malno:noamal2210@noa.ghwa7bo.mongodb.net/?retryWrites=true&w=majority&appName=noa"
 
 # create cluster
-# 8t7rTxPMACC29XwwibrOh08o2JcC8RHsC8RrlJF3l9Wcavxhkzcgh0Z6M6aoexz0
 client = MongoClient(uri, server_api=ServerApi('1'))
 
 # get all dbs and collections that needed
