@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Search_Results' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('searchResults.static', filename='css/searchResults.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <body>
+    <div class="card-search">
+          <h1 class="card-title">Business name</h1>
+          <!--<p class="card-text">search house kipping </p>-->
+        <div class="content-row">
+            <div class="details">
+            <p>Details about this handyman...</p>
+            </div>
+            <img src="../../static/img/handyman.png" alt="handyman" id="imgHandy">
+        </div>
+
+        <button type="button" class="btn" onclick="showPhone()">Click to show the Phone number</button>
+        <div id="phoneNumberDisplay"></div>
+        <div class="buttons">
+          <button class="prev" type="button">
+            <img src="../../static/img/preview.png" alt="Previous" id="prev">
+          </button>
+          <button class="next" type="button">
+            <img src="../../static/img/next.png" alt="Next" id="next">
+          </button>
+        </div>
+    </div>
+  </body>
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('searchResults.static', filename='js/searchResults.js') }}"></script>
+{% endblock %}
