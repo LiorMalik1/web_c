@@ -9,12 +9,12 @@ const phoneInput = document.querySelector('#phone')
 const msg = document.querySelector('.msg')
 
 const onSubmit = (e) => {
-    e.preventDefault()
+   e.preventDefault()
 
     //isEmpty
     if (firstNameInput.value === '' || lastNameInput.value === '' || emailInput.value === '' || passwordInput.value === '' || addressInput.value === '' || genderInput.value === '' ||phoneInput.value === '' ){
       console.log('fields empty')
-        msg.innerHTML ="Please fill out all fields";
+      msg.innerHTML ="Please fill out all fields";
     }
 
   //isString
@@ -44,6 +44,16 @@ const onSubmit = (e) => {
       msg.innerHTML ="please enter a valid phone number";
      }
     else {
+        var formData = new FormData(e.target)
+        // prepare AJAX request
+        var request = new XMLHttpRequest()
+        // get the method and action from the form
+        var method = e.target.method || 'POST'
+        var action = e.target.action || '#'
+
+        // perform the AJAX request
+        request.open(method, action)
+        request.send(formData)
         console.log('fields filled up')
         alert("Well done! you are in:)")
         const li = document.createElement('li')
@@ -57,4 +67,4 @@ const onSubmit = (e) => {
         phoneInput.value = ''
     }
 }
-myForm.addEventListener('submit', onSubmit)
+ myForm.addEventListener('submit', onSubmit)

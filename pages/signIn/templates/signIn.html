@@ -2,14 +2,12 @@
 {% extends 'base.html' %}
 
 {% set page_head_title = 'Sign_In' %}
-{% block css %}
-<!--
-    <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
--->
 
+{% block css %}
+
+    <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
 
 {% endblock %}
-<link rel="stylesheet" type="text/css" href="../static/css/signIn.css"/>
 
 {% block page_body_main_content %}
       <body>
@@ -20,27 +18,27 @@
         <form action="/signIn"  method="POST"  class="my-form" >
            <div class="msg"></div>
             <label>First Name: </label><br><br>
-              <input type="text" name="First-Name" id="name" placeholder="First name...">
+              <input type="text" name="firstName" id="name" placeholder="First name...">
               <br>
               <br>
               <label>Last Name: </label><br><br>
-              <input type="text" name="Last-Name" id="last_name" placeholder="Last name...">
+              <input type="text" name="lastName" id="last_name" placeholder="Last name...">
               <br>
               <br>
               <label>User Name: </label><br><br>
-              <input type="text" name="UserName" id="User_Name" placeholder="User Name...">
+              <input type="text" name="username" id="User_Name" placeholder="User Name...">
               <br>
               <br>
               <label>E-mail: </label><br><br>
-              <input type="email" name="Email"  id="email" placeholder="E-mail...">
+              <input type="email" name="email"  id="email" placeholder="E-mail...">
               <br>
               <br>
               <label>Password: </label><br><br>
-              <input type="password" name="Password" id="password" placeholder="**********">
+              <input type="password" name="password" id="password" placeholder="**********">
               <br>
               <br>
               <label>Address: </label><br><br>
-                <input type="text" name="City" id="city" placeholder="City...">
+                <input type="text" name="city" id="city" placeholder="City...">
               <br>
               <br>
               <label>Gender: </label><br><br>
