@@ -71,3 +71,14 @@ def create_customer(firstName,lastName, username, email, password, city,gender, 
     customers_col.insert_one(new_customer)
 
 
+def save_user_to_db(user):
+    validate_user = dict()
+    validate_user['firstName'] = user.get('firstName', 'no_first_name')
+    validate_user['lastName'] = user.get('lastName', 'no_last_name')
+    validate_user['age'] = user.get('age', 'no_age')
+    validate_user['email'] = user.get('email', 'no_email')
+    validate_user['password'] = user.get('password', 'no_password')
+    validate_user['phoneNumber'] = user.get('phoneNumber', 'no_phoneNumber')
+
+    res = customers_col.insert_one(validate_user)
+    print(res.inserted_id)

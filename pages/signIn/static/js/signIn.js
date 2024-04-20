@@ -20,6 +20,9 @@ const onSubmit = (e) => {
   //isString
    else if( !/^[a-zA-Z\s]*$/i.test(firstNameInput.value) || !/^[a-zA-Z\s]*$/i.test(lastNameInput.value) || !/^[a-zA-Z\s]*$/i.test(addressInput.value) ){
      console.log('not letters')
+     console.log(firstNameInput.value)
+     console.log(lastNameInput.value)
+     console.log(addressInput.value)
      msg.innerHTML ="Only English letters are allowed";
    }
 

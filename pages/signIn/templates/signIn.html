@@ -2,14 +2,14 @@
 {% extends 'base.html' %}
 
 {% set page_head_title = 'Sign_In' %}
-
 {% block css %}
 <!--
     <link rel="stylesheet" href="{{ url_for('signIn.static', filename='css/signIn.css') }}"/>
 -->
-    <link rel="stylesheet" type="text/css" href="../static/css/signIn.css"/>
+
 
 {% endblock %}
+<link rel="stylesheet" type="text/css" href="../static/css/signIn.css"/>
 
 {% block page_body_main_content %}
       <body>
@@ -17,7 +17,7 @@
         <div class="signIn">
           <h1>Sign In </h1>
         </div>
-        <form action="" class="my-form" >
+        <form action="/signIn"  method="POST"  class="my-form" >
            <div class="msg"></div>
             <label>First Name: </label><br><br>
               <input type="text" name="First-Name" id="name" placeholder="First name...">

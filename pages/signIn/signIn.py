@@ -29,6 +29,7 @@ def signInCustomer():
                         request.form.get('gender'),
                         request.form.get('phone')
                         )
+        print("create_customer")
         return redirect(url_for('signIn.index'))
     else:
         message = "Username already exists in the system, please choose another username"
