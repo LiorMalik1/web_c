@@ -6,6 +6,8 @@ from flask import Flask, redirect, url_for, render_template, request, session, B
 #uri = "mongodb+srv://malno:noamal2210@noa.ghwa7bo.mongodb.net/?retryWrites=true&w=majority&appName=noa"
 #client = MongoClient(uri, server_api=ServerApi('1'))
 
+
+# HERE
 app: Flask = Flask(__name__)
 app.config.from_pyfile('settings.py')
 app.secret_key = '123'
