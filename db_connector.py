@@ -34,7 +34,6 @@ def create_business(businessName, username, email, password, city ,gender, phone
         'email': email,
         'password': password,
         'city': city,
-        'gender': gender,
         'phone': phone,
         'proffesion': proffesion,
         'seniority': seniority,
