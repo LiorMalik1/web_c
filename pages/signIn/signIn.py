@@ -1,7 +1,7 @@
 from flask import render_template, Blueprint, session, request, jsonify, redirect, url_for
 import db_connector
 from db_connector import *
-#check here
+
 # About_Us blueprint definition
 signIn = Blueprint(
     'signIn',
