@@ -14,7 +14,7 @@
           {% if session.get('logged_in') %}
              <p> User: {{session.get('username')}}</p>
           {% else %}
-          <form method = "POST" action="/login" class="my-form3">
+          <form method = "POST" action="/logIn" class="my-form3">
             <div class="msg3"></div>
             <label> User Name: </label><br><br>
           <input type="text" name="username" id="user_name" placeholder="">
